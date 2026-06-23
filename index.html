@@ -13,7 +13,7 @@ body{
 }
 
 .container{
-    max-width:600px;
+    max-width:900px;
     margin:0 auto;
 }
 
@@ -56,6 +56,14 @@ th{
     background-color:#0066cc;
     color:white;
 }
+
+.btn-editar{
+    background:#f39c12;
+}
+
+.btn-eliminar{
+    background:#e74c3c;
+}
 </style>
 </head>
 
@@ -66,9 +74,12 @@ th{
 <h2>Panel de Inventario (MongoDB Atlas)</h2>
 
 <div class="card">
-<h3>Registrar Producto</h3>
+
+<h3>Registrar / Editar Producto</h3>
 
 <form id="formProducto">
+
+<input type="hidden" id="productoId">
 
 <input type="text" id="nombre" placeholder="Nombre del artículo" required>
 
@@ -76,9 +87,10 @@ th{
 
 <input type="number" id="existencia" placeholder="Cantidad" required>
 
-<button type="submit">Enviar a la Nube</button>
+<button type="submit">Guardar Producto</button>
 
 </form>
+
 </div>
 
 <div class="card">
@@ -92,6 +104,8 @@ th{
 <th>Artículo</th>
 <th>Precio</th>
 <th>Stock</th>
+<th>Editar</th>
+<th>Eliminar</th>
 </tr>
 </thead>
 
